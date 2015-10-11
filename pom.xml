@@ -158,7 +158,6 @@
                                     </destFileName>
                                 </artifactItem>
 
-
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>addresshierarchy-omod</artifactId>
@@ -236,6 +235,33 @@
                                     <filtering>true</filtering>
                                     <includes>
                                         <include>${scriptFilename}</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- Copy the omods in the modules directory which are not downloadable from http://mavenrepo.openmrs.org/nexus -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <id>copy-module-resources</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/WEB-INF/bundledModules</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>modules</directory>
+                                    <filtering>true</filtering>
+                                    <includes>
+                                        <include>*.omod</include>
                                     </includes>
                                 </resource>
                             </resources>
