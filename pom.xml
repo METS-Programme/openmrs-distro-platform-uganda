@@ -32,22 +32,19 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <openMRSVersion>1.11.4</openMRSVersion>
+        <openMRSVersion>1.9.9</openMRSVersion>
         <webservices.restModuleVersion>2.6</webservices.restModuleVersion>
 
         <!-- Modules Bundled for Uganda distribution  -->
         <addresshierarchyVersion>2.2.4</addresshierarchyVersion>
         <birtVersion>2.3.2.1</birtVersion>
         <custombrandingVersion>0.1</custombrandingVersion>
-        <!-- 1.1.3 not found in Sonatype Nexus so using closest version with a jar -->
-        <dataintegrityVersion>2.1</dataintegrityVersion>
+        <dataintegrityVersion>2.2</dataintegrityVersion>
         <formfilterVersion>1.0.0</formfilterVersion>
         <htmlformentryVersion>2.6</htmlformentryVersion>
         <htmlwidgetsVersion>1.6.4</htmlwidgetsVersion>
-        <!-- version 0.4.1 not available using oldest available version -->
-        <logicVersion>0.5.2</logicVersion>
         <reportingcompatibilityVersion>1.5.8</reportingcompatibilityVersion>
-        <serializationxstreamVersion>0.2.7</serializationxstreamVersion>
+        <serializationxstreamVersion>0.2.8</serializationxstreamVersion>
 
         <!-- platform configurations -->
         <warFilename>openmrs</warFilename>
@@ -75,12 +72,14 @@
             <version>${addresshierarchyVersion}</version>
             <scope>provided</scope>
         </dependency>
+        <!-- TODO: Uncomment this line once the 2.2 version of the Data Integrity module is deployed
+
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>dataintegrity-omod</artifactId>
             <version>${dataintegrityVersion}</version>
             <scope>provided</scope>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>formfilter-omod</artifactId>
@@ -105,13 +104,6 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>htmlwidgets-omod</artifactId>
             <version>${htmlwidgetsVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>logic-omod</artifactId>
-            <version>${logicVersion}</version>
-            <type>omod</type>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -158,17 +150,26 @@
                                     </destFileName>
                                 </artifactItem>
 
+                                <!-- TODO: Does the birt module need to be added here for the war file -->
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>addresshierarchy-omod</artifactId>
                                     <destFileName>${modulesFolder}/addresshierarchy-${addresshierarchyVersion}.omod
                                     </destFileName>
                                 </artifactItem>
+                                <!-- TODO: Uncomment this once the 2.2 version of the Data Integrity module is deployed
+
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>dataintegrity-omod</artifactId>
                                     <destFileName>${modulesFolder}/dataintegrity-${dataintegrityVersion}.omod
                                     </destFileName>
+                                </artifactItem>-->
+
+                                <artifactItem>
+                                    <groupId>org.openmrs.module</groupId>
+                                    <artifactId>formfilter-omod</artifactId>
+                                    <destFileName>${modulesFolder}/formfilter-${formfilterVersion}.omod</destFileName>
                                 </artifactItem>
 
                                 <artifactItem>
@@ -180,29 +181,18 @@
 
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
-                                    <artifactId>formfilter-omod</artifactId>
-                                    <destFileName>${modulesFolder}/formfilter-${formfilterVersion}.omod</destFileName>
-                                </artifactItem>
-
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
                                     <artifactId>htmlwidgets-omod</artifactId>
                                     <destFileName>${modulesFolder}/htmlwidgets-${htmlwidgetsVersion}.omod</destFileName>
                                 </artifactItem>
 
-                                <!-- TODO: Fix the addition of the logic and birt modules to the war files -->
-                                <!--<artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>logic-omod</artifactId>
-                                    <destFileName>${modulesFolder}/logic-omod-${logicVersion}.omod</destFileName>
-                                </artifactItem>-->
-                                <dependency>
+                                <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>reportingcompatibility-omod</artifactId>
                                     <destFileName>
                                         ${modulesFolder}/reportingcompatibility-${reportingcompatibilityVersion}.omod
                                     </destFileName>
-                                </dependency>
+                                </artifactItem>
+
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>serialization.xstream-api</artifactId>
@@ -210,7 +200,7 @@
                                         ${modulesFolder}/serialization.xstream-${serializationxstreamVersion}.omod
                                     </destFileName>
                                 </artifactItem>
-
+-->
                             </artifactItems>
                         </configuration>
                     </execution>
@@ -240,14 +230,7 @@
                             </resources>
                         </configuration>
                     </execution>
-                </executions>
-            </plugin>
-            <!-- Copy the omods in the modules directory which are not downloadable from http://mavenrepo.openmrs.org/nexus -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>2.6</version>
-                <executions>
+                    <!-- Copy the omods in the modules directory which are not downloadable from http://mavenrepo.openmrs.org/nexus -->
                     <execution>
                         <id>copy-module-resources</id>
                         <phase>package</phase>
@@ -269,6 +252,7 @@
                     </execution>
                 </executions>
             </plugin>
+
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
