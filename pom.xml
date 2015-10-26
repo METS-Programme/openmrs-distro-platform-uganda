@@ -6,8 +6,8 @@
     <artifactId>platform-uganda</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Uganda EMR Platform</name>
-    <description>A project for packaging the OpenMRS Platform for Uganda</description>
+    <name>Uganda OpenMRS Platform</name>
+    <description>A project for packaging the custom OpenMRS Platform distribution for Uganda</description>
     <url>http://openmrs.org</url>
 
     <licenses>
@@ -19,7 +19,7 @@
 
     <organization>
         <name>Monitoring and Evaluation Technical Support Project collaboration between Makerere School of Public Health
-            and University of Carlifonia San Francisco
+            and University of Carlifonia San Francisco (UCSF)
         </name>
         <url>http://mets.or.ug</url>
     </organization>
@@ -38,13 +38,15 @@
         <!-- Modules Bundled for Uganda distribution  -->
         <addresshierarchyVersion>2.2.4</addresshierarchyVersion>
         <birtVersion>2.3.2.1</birtVersion>
+        <calculationVersion>1.1</calculationVersion>
         <custombrandingVersion>0.1</custombrandingVersion>
         <dataintegrityVersion>2.2</dataintegrityVersion>
         <formfilterVersion>1.0.0</formfilterVersion>
         <htmlformentryVersion>2.6</htmlformentryVersion>
         <htmlwidgetsVersion>1.6.4</htmlwidgetsVersion>
+        <reportingVersion>0.9.7</reportingVersion>
         <reportingcompatibilityVersion>1.5.8</reportingcompatibilityVersion>
-        <serializationxstreamVersion>0.2.8</serializationxstreamVersion>
+        <serializationxstreamVersion>0.2.9</serializationxstreamVersion>
 
         <!-- platform configurations -->
         <warFilename>openmrs</warFilename>
@@ -70,6 +72,12 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>addresshierarchy-omod</artifactId>
             <version>${addresshierarchyVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>calculation-omod</artifactId>
+            <version>${calculationVersion}</version>
             <scope>provided</scope>
         </dependency>
         <!-- TODO: Uncomment this line once the 2.2 version of the Data Integrity module is deployed
@@ -108,15 +116,22 @@
         </dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
+            <artifactId>reporting-omod</artifactId>
+            <version>${reportingVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
             <artifactId>reportingcompatibility-omod</artifactId>
             <version>${reportingcompatibilityVersion}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
-            <artifactId>serialization.xstream-api</artifactId>
+            <artifactId>serialization.xstream-omod</artifactId>
             <version>${serializationxstreamVersion}</version>
             <scope>provided</scope>
+            <type>omod</type>
         </dependency>
     </dependencies>
 
@@ -150,14 +165,14 @@
                                     </destFileName>
                                 </artifactItem>
 
-                                <!-- TODO: Does the birt module need to be added here for the war file -->
+                                <!-- TODO: Add the download of the birt module from Nexus Repo -->
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>addresshierarchy-omod</artifactId>
                                     <destFileName>${modulesFolder}/addresshierarchy-${addresshierarchyVersion}.omod
                                     </destFileName>
                                 </artifactItem>
-                                <!-- TODO: Uncomment this once the 2.2 version of the Data Integrity module is deployed
+                                <!-- TODO: Download the 2.2 version of the Data Integrity module from Nexus Repo
 
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
@@ -165,6 +180,12 @@
                                     <destFileName>${modulesFolder}/dataintegrity-${dataintegrityVersion}.omod
                                     </destFileName>
                                 </artifactItem>-->
+
+                                <artifactItem>
+                                    <groupId>org.openmrs.module</groupId>
+                                    <artifactId>calculation-omod</artifactId>
+                                    <destFileName>${modulesFolder}/calculation-${calculationVersion}.omod</destFileName>
+                                </artifactItem>
 
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
@@ -187,20 +208,29 @@
 
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
+                                    <artifactId>reporting-omod</artifactId>
+                                    <destFileName>
+                                        ${modulesFolder}/reporting-${reportingVersion}.omod
+                                    </destFileName>
+                                </artifactItem>
+
+                                <artifactItem>
+                                    <groupId>org.openmrs.module</groupId>
                                     <artifactId>reportingcompatibility-omod</artifactId>
                                     <destFileName>
                                         ${modulesFolder}/reportingcompatibility-${reportingcompatibilityVersion}.omod
                                     </destFileName>
                                 </artifactItem>
 
-                                <artifactItem>
+                                <!-- TODO: Fix the loading of the serialization omod from Nexus rather than bundling it in the modules directory
+
+                                    <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
-                                    <artifactId>serialization.xstream-api</artifactId>
+                                    <artifactId>serialization.xstream-omod</artifactId>
                                     <destFileName>
                                         ${modulesFolder}/serialization.xstream-${serializationxstreamVersion}.omod
                                     </destFileName>
-                                </artifactItem>
--->
+                                </artifactItem>-->
                             </artifactItems>
                         </configuration>
                     </execution>
@@ -239,6 +269,11 @@
                         </goals>
                         <configuration>
                             <outputDirectory>${project.build.directory}/WEB-INF/bundledModules</outputDirectory>
+                            <!-- prevent corruption of binary files by filtering activity which may be needed -->
+                            <nonFilteredFileExtensions>
+                                <nonFilteredFileExtension>jar</nonFilteredFileExtension>
+                                <nonFilteredFileExtension>omod</nonFilteredFileExtension>
+                            </nonFilteredFileExtensions>
                             <resources>
                                 <resource>
                                     <directory>modules</directory>
