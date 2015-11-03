@@ -67,7 +67,6 @@
             <version>${webservices.restModuleVersion}</version>
         </dependency>
 
-
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>addresshierarchy-omod</artifactId>
@@ -80,14 +79,13 @@
             <version>${calculationVersion}</version>
             <scope>provided</scope>
         </dependency>
-        <!-- TODO: Uncomment this line once the 2.2 version of the Data Integrity module is deployed
 
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>dataintegrity-omod</artifactId>
             <version>${dataintegrityVersion}</version>
             <scope>provided</scope>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>formfilter-omod</artifactId>
@@ -165,21 +163,19 @@
                                     </destFileName>
                                 </artifactItem>
 
-                                <!-- TODO: Add the download of the birt module from Nexus Repo -->
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>addresshierarchy-omod</artifactId>
                                     <destFileName>${modulesFolder}/addresshierarchy-${addresshierarchyVersion}.omod
                                     </destFileName>
                                 </artifactItem>
-                                <!-- TODO: Download the 2.2 version of the Data Integrity module from Nexus Repo
 
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>dataintegrity-omod</artifactId>
                                     <destFileName>${modulesFolder}/dataintegrity-${dataintegrityVersion}.omod
                                     </destFileName>
-                                </artifactItem>-->
+                                </artifactItem>
 
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
