@@ -52,6 +52,8 @@
         <warFilename>openmrs</warFilename>
         <scriptFilename>add-modules.sh</scriptFilename>
         <modulesFolder>WEB-INF/bundledModules</modulesFolder>
+        <scriptsFolder>WEB-INF/view/scripts</scriptsFolder>
+        <templatesFolder>WEB-INF/template</templatesFolder>
     </properties>
 
     <dependencies>
@@ -258,7 +260,7 @@
                     </execution>
                     <!-- Copy the omods in the modules directory which are not downloadable from http://mavenrepo.openmrs.org/nexus -->
                     <execution>
-                        <id>copy-module-resources</id>
+                        <id>copy-downloaded-modules</id>
                         <phase>package</phase>
                         <goals>
                             <goal>copy-resources</goal>
@@ -277,6 +279,44 @@
                                     <includes>
                                         <include>*.omod</include>
                                     </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+
+                    <!-- Copy the Twitter Bootstrap js, css and fonts into the WEB-INF scripts folder -->
+                    <execution>
+                        <id>copy-twitter-bootstrap-files</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/WEB-INF/view/scripts/twitterbootstrap</outputDirectory>
+
+                            <resources>
+                                <resource>
+                                    <directory>resources/twitterbootstrap</directory>
+                                    <filtering>false</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+
+                    <!-- Copy the template header override which includes the full Header file -->
+                    <execution>
+                        <id>copy-template-header-file</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/WEB-INF/template</outputDirectory>
+
+                            <resources>
+                                <resource>
+                                    <directory>resources/template</directory>
+                                    <filtering>false</filtering>
                                 </resource>
                             </resources>
                         </configuration>
