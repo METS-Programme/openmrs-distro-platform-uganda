@@ -44,9 +44,13 @@
         <formfilterVersion>1.0.0</formfilterVersion>
         <htmlformentryVersion>2.6</htmlformentryVersion>
         <htmlwidgetsVersion>1.6.4</htmlwidgetsVersion>
+        <metadatadeployVersion>1.5</metadatadeployVersion>
+        <metadatamappingVersion>1.0.2</metadatamappingVersion>
+        <metadatasharingVersion>1.1.9</metadatasharingVersion>
         <reportingVersion>0.9.7</reportingVersion>
         <reportingcompatibilityVersion>1.5.8</reportingcompatibilityVersion>
         <serializationxstreamVersion>0.2.9</serializationxstreamVersion>
+
 
         <!-- platform configurations -->
         <warFilename>openmrs</warFilename>
@@ -112,6 +116,24 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>htmlwidgets-omod</artifactId>
             <version>${htmlwidgetsVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>metadatadeploy-omod</artifactId>
+            <version>${metadatadeployVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>metadatamapping-omod</artifactId>
+            <version>${metadatamappingVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>metadatasharing-omod</artifactId>
+            <version>${metadatasharingVersion}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -203,6 +225,22 @@
                                     <artifactId>htmlwidgets-omod</artifactId>
                                     <destFileName>${modulesFolder}/htmlwidgets-${htmlwidgetsVersion}.omod</destFileName>
                                 </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.openmrs.module</groupId>
+                                    <artifactId>metadatadeploy-omod</artifactId>
+                                    <destFileName>${modulesFolder}/metadatadeploy-${metadatadeployVersion}.omod</destFileName>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.openmrs.module</groupId>
+                                    <artifactId>metadatamapping-omod</artifactId>
+                                    <destFileName>${modulesFolder}/metadatamapping-${metadatamappingVersion}.omod</destFileName>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.openmrs.module</groupId>
+                                    <artifactId>metadatasharing-omod</artifactId>
+                                    <destFileName>${modulesFolder}/metadatasharing-${metadatasharingVersion}.omod</destFileName>
+                                </artifactItem>
+
 
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
