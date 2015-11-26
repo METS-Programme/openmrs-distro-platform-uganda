@@ -47,7 +47,7 @@
         <metadatadeployVersion>1.5</metadatadeployVersion>
         <metadatamappingVersion>1.0.2</metadatamappingVersion>
         <metadatasharingVersion>1.1.9</metadatasharingVersion>
-        <reportingVersion>0.9.7</reportingVersion>
+        <reportingVersion>0.9.8.1</reportingVersion>
         <reportingcompatibilityVersion>1.5.8</reportingcompatibilityVersion>
         <serializationxstreamVersion>0.2.9</serializationxstreamVersion>
 
