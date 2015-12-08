@@ -228,17 +228,20 @@
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>metadatadeploy-omod</artifactId>
-                                    <destFileName>${modulesFolder}/metadatadeploy-${metadatadeployVersion}.omod</destFileName>
+                                    <destFileName>${modulesFolder}/metadatadeploy-${metadatadeployVersion}.omod
+                                    </destFileName>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>metadatamapping-omod</artifactId>
-                                    <destFileName>${modulesFolder}/metadatamapping-${metadatamappingVersion}.omod</destFileName>
+                                    <destFileName>${modulesFolder}/metadatamapping-${metadatamappingVersion}.omod
+                                    </destFileName>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>metadatasharing-omod</artifactId>
-                                    <destFileName>${modulesFolder}/metadatasharing-${metadatasharingVersion}.omod</destFileName>
+                                    <destFileName>${modulesFolder}/metadatasharing-${metadatasharingVersion}.omod
+                                    </destFileName>
                                 </artifactItem>
 
 
@@ -258,15 +261,14 @@
                                     </destFileName>
                                 </artifactItem>
 
-                                <!-- TODO: Fix the loading of the serialization omod from Nexus rather than bundling it in the modules directory
-
-                                    <artifactItem>
+                                <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>serialization.xstream-omod</artifactId>
                                     <destFileName>
                                         ${modulesFolder}/serialization.xstream-${serializationxstreamVersion}.omod
                                     </destFileName>
-                                </artifactItem>  -->
+                                    <type>omod</type>
+                                </artifactItem>
                             </artifactItems>
 
                         </configuration>
@@ -331,7 +333,8 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${project.build.directory}/WEB-INF/view/scripts/twitterbootstrap</outputDirectory>
+                            <outputDirectory>${project.build.directory}/WEB-INF/view/scripts/twitterbootstrap
+                            </outputDirectory>
 
                             <resources>
                                 <resource>
