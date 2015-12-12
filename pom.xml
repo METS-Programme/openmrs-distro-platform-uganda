@@ -72,6 +72,8 @@
         <appointmentschedulinguiVersion>1.0.3</appointmentschedulinguiVersion>
         <dataexchangeVersion>1.3.1</dataexchangeVersion>
         <formentryappVersion>1.2</formentryappVersion>
+        <logicVersion>0.5.2</logicVersion>
+        <reportingRestVersion>1.5</reportingRestVersion>
 
         <!-- platform configurations -->
         <warFilename>openmrs</warFilename>
@@ -306,6 +308,18 @@
             <version>${formentryappVersion}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>logic-api</artifactId>
+            <version>${logicVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openmrs.module</groupId>
+            <artifactId>reportingrest-omod</artifactId>
+            <version>${reportingRestVersion}</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -529,6 +543,16 @@
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>formentryapp-omod</artifactId>
                                     <destFileName>${modulesFolder}/formentryapp-omod-${formentryappVersion}.omod</destFileName>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.openmrs.module</groupId>
+                                    <artifactId>logic-api</artifactId>
+                                    <destFileName>${modulesFolder}/logic-omod-${logicVersion}.omod</destFileName>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.openmrs.module</groupId>
+                                    <artifactId>reportingrest-omod</artifactId>
+                                    <destFileName>${modulesFolder}/reportingrest-omod-${reportingRestVersion}.omod</destFileName>
                                 </artifactItem>
                             </artifactItems>
 
