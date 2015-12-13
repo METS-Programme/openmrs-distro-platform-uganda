@@ -37,9 +37,7 @@
 
         <!-- Modules Bundled for Uganda distribution  -->
         <addresshierarchyVersion>2.2.4</addresshierarchyVersion>
-        <birtVersion>2.3.2.1</birtVersion>
         <calculationVersion>1.1</calculationVersion>
-        <custombrandingVersion>0.1</custombrandingVersion>
         <dataintegrityVersion>2.3</dataintegrityVersion>
         <formfilterVersion>1.0.0</formfilterVersion>
         <htmlformentryVersion>2.6</htmlformentryVersion>
@@ -49,7 +47,6 @@
         <metadatamappingVersion>1.0.2</metadatamappingVersion>
         <metadatasharingVersion>1.1.10</metadatasharingVersion>
         <reportingVersion>0.9.8.1</reportingVersion>
-        <reportingcompatibilityVersion>1.5.8</reportingcompatibilityVersion>
         <serializationxstreamVersion>0.2.9</serializationxstreamVersion>
         <uicommonsVersion>1.7</uicommonsVersion>
         <appuiVersion>1.4</appuiVersion>
@@ -163,12 +160,6 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>reporting-omod</artifactId>
             <version>${reportingVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>reportingcompatibility-omod</artifactId>
-            <version>${reportingcompatibilityVersion}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
