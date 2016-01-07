@@ -394,12 +394,12 @@
                                     <artifactId>htmlwidgets-omod</artifactId>
                                     <destFileName>${modulesFolder}/htmlwidgets-${htmlwidgetsVersion}.omod</destFileName>
                                 </artifactItem>
-                                <artifactItem>
+                                <!--<artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>metadatadeploy-omod</artifactId>
                                     <destFileName>${modulesFolder}/metadatadeploy-${metadatadeployVersion}.omod
                                     </destFileName>
-                                </artifactItem>
+                                </artifactItem>-->
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>metadatamapping-omod</artifactId>
