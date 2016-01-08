@@ -36,14 +36,14 @@
         <webservices.restModuleVersion>2.12</webservices.restModuleVersion>
 
         <!-- Modules Bundled for Uganda distribution  -->
-        <addresshierarchyVersion>2.2.4</addresshierarchyVersion>
+        <addresshierarchyVersion>2.7</addresshierarchyVersion>
         <calculationVersion>1.1</calculationVersion>
         <dataintegrityVersion>2.3</dataintegrityVersion>
         <formfilterVersion>1.0.0</formfilterVersion>
-        <htmlformentryVersion>2.6</htmlformentryVersion>
+        <htmlformentryUpVersion>2.6</htmlformentryUpVersion>
         <htmlwidgetsVersion>1.7.0</htmlwidgetsVersion>
 
-        <metadatadeployVersion>1.5</metadatadeployVersion>
+        <metadatadeployVersion>1.7</metadatadeployVersion>
         <metadatamappingVersion>1.0.2</metadatamappingVersion>
         <metadatasharingVersion>1.1.10</metadatasharingVersion>
         <reportingVersion>0.9.8.1</reportingVersion>
@@ -394,12 +394,12 @@
                                     <artifactId>htmlwidgets-omod</artifactId>
                                     <destFileName>${modulesFolder}/htmlwidgets-${htmlwidgetsVersion}.omod</destFileName>
                                 </artifactItem>
-                                <!--<artifactItem>
+                                <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>metadatadeploy-omod</artifactId>
                                     <destFileName>${modulesFolder}/metadatadeploy-${metadatadeployVersion}.omod
                                     </destFileName>
-                                </artifactItem>-->
+                                </artifactItem>
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>metadatamapping-omod</artifactId>
