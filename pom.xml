@@ -36,11 +36,13 @@
         <webservices.restModuleVersion>2.12</webservices.restModuleVersion>
 
         <!-- Modules Bundled for Uganda distribution  -->
+        <!-- TODO: Arrange the dependencies and variables in alphabetical order -->
+        <!-- TODO: Reemove dependencies on API where omods are available -->
         <addresshierarchyVersion>2.7</addresshierarchyVersion>
         <calculationVersion>1.1</calculationVersion>
         <dataintegrityVersion>2.3</dataintegrityVersion>
         <formfilterVersion>1.0.0</formfilterVersion>
-        <htmlformentryUpVersion>2.6</htmlformentryUpVersion>
+        <htmlformentryVersion>2.6</htmlformentryVersion>
         <htmlwidgetsVersion>1.7.0</htmlwidgetsVersion>
 
         <metadatadeployVersion>1.7</metadatadeployVersion>
@@ -117,12 +119,6 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>formfilter-omod</artifactId>
             <version>${formfilterVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>htmlformentry-api</artifactId>
-            <version>${htmlformentryVersion}</version>
             <scope>provided</scope>
         </dependency>
 
@@ -348,6 +344,7 @@
                                     <type>war</type>
                                     <destFileName>${warFilename}.war</destFileName>
                                 </artifactItem>
+
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>webservices.rest-omod</artifactId>
