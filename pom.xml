@@ -40,14 +40,13 @@
         <!-- TODO: Reemove dependencies on API where omods are available -->
         <addresshierarchyVersion>2.7</addresshierarchyVersion>
         <calculationVersion>1.1</calculationVersion>
-        <dataintegrityVersion>2.3</dataintegrityVersion>
         <formfilterVersion>1.0.0</formfilterVersion>
         <htmlformentryVersion>2.6</htmlformentryVersion>
         <htmlwidgetsVersion>1.7.0</htmlwidgetsVersion>
 
         <metadatadeployVersion>1.7</metadatadeployVersion>
         <metadatamappingVersion>1.0.2</metadatamappingVersion>
-        <metadatasharingVersion>1.1.10</metadatasharingVersion>
+        <metadatasharingVersion>1.2-SNAPSHOT</metadatasharingVersion>
         <reportingVersion>0.9.8.1</reportingVersion>
         <serializationxstreamVersion>0.2.9</serializationxstreamVersion>
         <uicommonsVersion>1.7</uicommonsVersion>
@@ -118,12 +117,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>dataintegrity-omod</artifactId>
-            <version>${dataintegrityVersion}</version>
-            <scope>provided</scope>
-        </dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>formfilter-omod</artifactId>
@@ -373,13 +366,6 @@
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>aijar-omod</artifactId>
                                     <destFileName>${modulesFolder}/aijar-${aijarVersion}.omod
-                                    </destFileName>
-                                </artifactItem>
-
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>dataintegrity-omod</artifactId>
-                                    <destFileName>${modulesFolder}/dataintegrity-${dataintegrityVersion}.omod
                                     </destFileName>
                                 </artifactItem>
 
