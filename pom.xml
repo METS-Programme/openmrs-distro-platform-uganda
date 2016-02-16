@@ -76,7 +76,6 @@
         <chartsearchVersion>1.4.1</chartsearchVersion>
 
         <aijarVersion>1.0-SNAPSHOT</aijarVersion>
-        <usagestatisticsVersion>1.4.2</usagestatisticsVersion>
 
         <!-- platform configurations -->
         <warFilename>openmrs</warFilename>
@@ -324,12 +323,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>usagestatistics-omod</artifactId>
-            <version>${usagestatisticsVersion}</version>
-            <scope>provided</scope>
-        </dependency>
     </dependencies>
 
     <build>
@@ -568,11 +561,6 @@
                                     <destFileName>${modulesFolder}/chartsearch-${chartsearchVersion}.omod</destFileName>
                                 </artifactItem>
 
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>usagestatistics-omod</artifactId>
-                                    <destFileName>${modulesFolder}/usagestatistics-${usagestatisticsVersion}.omod</destFileName>
-                                </artifactItem>
                             </artifactItems>
 
                         </configuration>
