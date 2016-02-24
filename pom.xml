@@ -448,11 +448,11 @@
                                     <artifactId>appframework-omod</artifactId>
                                     <destFileName>${modulesFolder}/appframework-${appframeworkVersion}.omod</destFileName>
                                 </artifactItem>
-                                <artifactItem>
+                                <!--<artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>uiframework-omod</artifactId>
                                     <destFileName>${modulesFolder}/uiframework-${uiframeworkVersion}.omod</destFileName>
-                                </artifactItem>
+                                </artifactItem>-->
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>adminui-omod</artifactId>
