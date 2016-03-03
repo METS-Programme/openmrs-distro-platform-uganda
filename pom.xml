@@ -54,9 +54,9 @@
 		<eventVersion>2.2.1</eventVersion>
 		<formentryappVersion>1.2</formentryappVersion>
         <formfilterVersion>1.0.0</formfilterVersion>
-		<htmlformentry19extVersion>1.6.1</htmlformentry19extVersion>
-		<htmlformentryuiVersion>1.4</htmlformentryuiVersion>
-        <htmlformentryVersion>2.7</htmlformentryVersion>
+		<htmlformentry19extVersion>1.7</htmlformentry19extVersion>
+		<htmlformentryuiVersion>1.5</htmlformentryuiVersion>
+        <htmlformentryVersion>3.1</htmlformentryVersion>
 
         <htmlwidgetsVersion>1.7.0</htmlwidgetsVersion>
 		<idgenVersion>3.2</idgenVersion>
