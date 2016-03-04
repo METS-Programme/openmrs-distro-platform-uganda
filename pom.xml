@@ -70,7 +70,7 @@
 		<reportingRestVersion>1.5</reportingRestVersion>
         <reportingVersion>0.9.8.1</reportingVersion>
         <serializationxstreamVersion>0.2.9</serializationxstreamVersion>
-        <uicommonsVersion>1.7</uicommonsVersion>
+        <uicommonsVersion>1.8</uicommonsVersion>
         <uiframeworkVersion>3.6</uiframeworkVersion>
         <uilibraryVersion>2.0.4</uilibraryVersion>
         <providermanagementVersion>2.3</providermanagementVersion>
