@@ -48,7 +48,7 @@
 		<appointmentschedulinguiVersion>1.1</appointmentschedulinguiVersion>
         <calculationVersion>1.1</calculationVersion>
 		<chartsearchVersion>1.4.1</chartsearchVersion>
-		<!--   <coreappsVersion>1.7</coreappsVersion>--> <!-- THe lastest version 1.7 can not built and its advisable not to use the Snapshot -->
+		<coreappsVersion>1.10-SNAPSHOT</coreappsVersion>
 		<dataexchangeVersion>1.3.1</dataexchangeVersion>
 		<emrapiVersion>1.12</emrapiVersion>
 		<eventVersion>2.2.1</eventVersion>
@@ -63,7 +63,7 @@
         <metadatadeployVersion>1.7</metadatadeployVersion>
         <metadatamappingVersion>1.0.2</metadatamappingVersion>
         <metadatasharingVersion>1.2-SNAPSHOT</metadatasharingVersion>
-		<!-- <referenceapplicationVersion>2.3</referenceapplicationVersion> --><!-- Used the custom because of the custom code to display forms basing on patient age -->
+		<referenceapplicationVersion>2.4-SNAPSHOT</referenceapplicationVersion>
 		<referencemetadataVersion>2.3.1</referencemetadataVersion>
 		<registrationappVersion>1.4</registrationappVersion>
 		<registrationcoreVersion>1.3</registrationcoreVersion>
@@ -238,12 +238,13 @@
             <scope>provided</scope>
         </dependency>
 
-        <!--<dependency>
+        <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>referenceapplication-omod</artifactId>
             <version>${referenceapplicationVersion}</version>
             <scope>provided</scope>
-        </dependency>-->
+        </dependency>
+
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>registrationcore-omod</artifactId>
@@ -256,12 +257,12 @@
             <version>${registrationappVersion}</version>
             <scope>provided</scope>
         </dependency>
-        <!--<dependency>
+       <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>coreapps-omod</artifactId>
             <version>${coreappsVersion}</version>
             <scope>provided</scope>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>idgen-omod</artifactId>
@@ -490,11 +491,12 @@
                                     <destFileName>${modulesFolder}/event-${eventVersion}.omod</destFileName>
                                 </artifactItem>
 
-                               <!-- <artifactItem>
+                               <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>referenceapplication-omod</artifactId>
                                     <destFileName>${modulesFolder}/referenceapplication-${referenceapplicationVersion}.omod</destFileName>
-                                </artifactItem>-->
+                                </artifactItem>
+
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>registrationcore-omod</artifactId>
@@ -505,11 +507,11 @@
                                     <artifactId>registrationapp-omod</artifactId>
                                     <destFileName>${modulesFolder}/registrationapp-${registrationappVersion}.omod</destFileName>
                                 </artifactItem>
-                               <!--<artifactItem>
+                               <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>coreapps-omod</artifactId>
                                     <destFileName>${modulesFolder}/coreapps-omod-${coreappsVersion}.omod</destFileName>
-                                </artifactItem>-->
+                                </artifactItem>
                                 <artifactItem>
                                     <groupId>org.openmrs.module</groupId>
                                     <artifactId>idgen-omod</artifactId>
