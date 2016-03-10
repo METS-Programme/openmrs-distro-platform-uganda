@@ -42,8 +42,8 @@
 		<addresshierarchyVersion>2.7</addresshierarchyVersion>
 		<allergyapiVersion>1.3</allergyapiVersion>
 		<allergyuiVersion>1.2</allergyuiVersion>
-        <appframeworkVersion>2.7</appframeworkVersion>
-        <appuiVersion>1.4</appuiVersion>
+        <appframeworkVersion>2.8</appframeworkVersion>
+        <appuiVersion>1.5.1</appuiVersion>
 		<appointmentschedulingVersion>1.4</appointmentschedulingVersion>
 		<appointmentschedulinguiVersion>1.1</appointmentschedulinguiVersion>
         <calculationVersion>1.1</calculationVersion>
