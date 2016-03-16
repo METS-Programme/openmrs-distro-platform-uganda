@@ -1,648 +1,735 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>org.openmrs.distro</groupId>
-    <artifactId>platform-uganda</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <name>Uganda OpenMRS Platform</name>
-    <description>A project for packaging the custom OpenMRS Platform distribution for Uganda</description>
-    <url>http://openmrs.org</url>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.openmrs.distro</groupId>
+	<artifactId>platform-uganda</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Uganda OpenMRS Platform</name>
+	<description>A project for packaging the custom OpenMRS Platform distribution for Uganda</description>
+	<url>http://openmrs.org</url>
 
-    <licenses>
-        <license>
-            <name>OpenMRS Public License</name>
-            <url>http://openmrs.org/wiki/License</url>
-        </license>
-    </licenses>
+	<licenses>
+		<license>
+			<name>OpenMRS Public License</name>
+			<url>http://openmrs.org/wiki/License</url>
+		</license>
+	</licenses>
 
-    <organization>
-        <name>Monitoring and Evaluation Technical Support Project collaboration between Makerere School of Public Health
-            and University of Carlifonia San Francisco (UCSF)
-        </name>
-        <url>http://mets.or.ug</url>
-    </organization>
+	<organization>
+		<name>Monitoring and Evaluation Technical Support Project collaboration between Makerere School of Public Health
+			and University of Carlifonia San Francisco (UCSF)
+		</name>
+		<url>http://mets.or.ug</url>
+	</organization>
 
-    <scm>
-        <connection>scm:git:https://github.com/ssmusoke/openmrs-distro-platform-uganda</connection>
-        <developerConnection>scm:git:https://github.com/ssmusoke/openmrs-distro-platform-uganda</developerConnection>
-        <url>https://github.com/ssmusoke/openmrs-distro-platform-uganda</url>
-    </scm>
+	<scm>
+		<connection>scm:git:https://github.com/ssmusoke/openmrs-distro-platform-uganda</connection>
+		<developerConnection>scm:git:https://github.com/ssmusoke/openmrs-distro-platform-uganda</developerConnection>
+		<url>https://github.com/ssmusoke/openmrs-distro-platform-uganda</url>
+	</scm>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <openMRSVersion>1.11.6-SNAPSHOT</openMRSVersion>
-        <webservices.restModuleVersion>2.12</webservices.restModuleVersion>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<openMRSVersion>1.11.6-SNAPSHOT</openMRSVersion>
+		<webservices.restModuleVersion>2.12</webservices.restModuleVersion>
 
-        <!-- Modules Bundled for Uganda distribution  -->
-        <!-- TODO: Arrange the dependencies and variables in alphabetical order -->
-        <!-- TODO: Remove dependencies on API where omods are available -->
-        <adminuiVersion>1.0</adminuiVersion>
-		<addresshierarchyVersion>2.7</addresshierarchyVersion>
+		<!-- Modules Bundled for Uganda distribution  -->
+		<!-- TODO: Arrange the dependencies and variables in alphabetical order -->
+		<!-- TODO: Remove dependencies on API where omods are available -->
+		<adminuiVersion>1.0</adminuiVersion>
+		<addresshierarchyVersion>2.8</addresshierarchyVersion>
 		<allergyapiVersion>1.3</allergyapiVersion>
 		<allergyuiVersion>1.2</allergyuiVersion>
-        <appframeworkVersion>2.8</appframeworkVersion>
-        <appuiVersion>1.5.1</appuiVersion>
+		<appframeworkVersion>2.8</appframeworkVersion>
+		<appuiVersion>1.5.1</appuiVersion>
 		<appointmentschedulingVersion>1.4</appointmentschedulingVersion>
 		<appointmentschedulinguiVersion>1.1</appointmentschedulinguiVersion>
-        <calculationVersion>1.1</calculationVersion>
+		<calculationVersion>1.1</calculationVersion>
 		<chartsearchVersion>1.4.1</chartsearchVersion>
 		<coreappsVersion>1.10-SNAPSHOT</coreappsVersion>
+		<databaseBackupVersion>1.2.1</databaseBackupVersion>
 		<dataexchangeVersion>1.3.1</dataexchangeVersion>
-		<emrapiVersion>1.12</emrapiVersion>
+		<emrapiVersion>1.13</emrapiVersion>
 		<eventVersion>2.2.1</eventVersion>
 		<formentryappVersion>1.2</formentryappVersion>
-        <formfilterVersion>1.0.0</formfilterVersion>
+		<formfilterVersion>1.0.0</formfilterVersion>
 		<htmlformentry19extVersion>1.7</htmlformentry19extVersion>
 		<htmlformentryuiVersion>1.5</htmlformentryuiVersion>
-        <htmlformentryVersion>3.1</htmlformentryVersion>
-
-        <htmlwidgetsVersion>1.7.0</htmlwidgetsVersion>
+		<htmlformentryVersion>3.1</htmlformentryVersion>
+		<htmlwidgetsVersion>1.7.1</htmlwidgetsVersion>
 		<idgenVersion>3.2</idgenVersion>
-        <metadatadeployVersion>1.7</metadatadeployVersion>
-        <metadatamappingVersion>1.0.2</metadatamappingVersion>
-        <metadatasharingVersion>1.2-SNAPSHOT</metadatasharingVersion>
+		<metadatadeployVersion>1.7</metadatadeployVersion>
+		<metadatamappingVersion>1.0.2</metadatamappingVersion>
+		<metadatasharingVersion>1.2-SNAPSHOT</metadatasharingVersion>
+		<providermanagementVersion>2.4</providermanagementVersion>
 		<referenceapplicationVersion>2.4-SNAPSHOT</referenceapplicationVersion>
 		<referencemetadataVersion>2.3.1</referencemetadataVersion>
 		<registrationappVersion>1.4</registrationappVersion>
 		<registrationcoreVersion>1.3</registrationcoreVersion>
 		<reportingRestVersion>1.5</reportingRestVersion>
-        <reportingVersion>0.9.8.1</reportingVersion>
-        <serializationxstreamVersion>0.2.9</serializationxstreamVersion>
-        <uicommonsVersion>1.8</uicommonsVersion>
-        <uiframeworkVersion>3.6</uiframeworkVersion>
-        <uilibraryVersion>2.0.4</uilibraryVersion>
-        <providermanagementVersion>2.3</providermanagementVersion>
+		<reportingVersion>0.9.8.1</reportingVersion>
+		<serializationxstreamVersion>0.2.10</serializationxstreamVersion>
+		<uicommonsVersion>1.8</uicommonsVersion>
+		<uiframeworkVersion>3.6</uiframeworkVersion>
+		<uilibraryVersion>2.0.4</uilibraryVersion>
+		<xformsVersion>4.3.7</xformsVersion>
 
 		<!-- core configuration library -->
-        <aijarVersion>1.0-SNAPSHOT</aijarVersion>
+		<aijarVersion>1.0-SNAPSHOT</aijarVersion>
 
-        <!-- platform configurations -->
-        <warFilename>openmrs</warFilename>
-        <scriptFilename>add-modules.sh</scriptFilename>
-        <modulesFolder>WEB-INF/bundledModules</modulesFolder>
-        <scriptsFolder>WEB-INF/view/scripts</scriptsFolder>
-    </properties>
+		<!-- platform configurations -->
+		<warFilename>openmrs</warFilename>
+		<scriptFilename>add-modules.sh</scriptFilename>
+		<modulesFolder>WEB-INF/bundledModules</modulesFolder>
+		<scriptsFolder>WEB-INF/view/scripts</scriptsFolder>
+	</properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.openmrs.web</groupId>
-            <artifactId>openmrs-webapp</artifactId>
-            <version>${openMRSVersion}</version>
-            <type>war</type>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>webservices.rest-omod</artifactId>
-            <version>${webservices.restModuleVersion}</version>
-        </dependency>
+	<dependencies>
+		<dependency>
+			<groupId>org.openmrs.web</groupId>
+			<artifactId>openmrs-webapp</artifactId>
+			<version>${openMRSVersion}</version>
+			<type>war</type>
+		</dependency>
 
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>aijar-omod</artifactId>
-            <version>${aijarVersion}</version>
-            <scope>provided</scope>
-        </dependency>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>webservices.rest-omod</artifactId>
+			<version>${webservices.restModuleVersion}</version>
+		</dependency>
 
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>addresshierarchy-omod</artifactId>
-            <version>${addresshierarchyVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>calculation-omod</artifactId>
-            <version>${calculationVersion}</version>
-            <scope>provided</scope>
-        </dependency>
+		<!-- Custom modules -->
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>aijar-omod</artifactId>
+			<version>${aijarVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>formfilter-omod</artifactId>
-            <version>${formfilterVersion}</version>
-            <scope>provided</scope>
-        </dependency>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>addresshierarchy-omod</artifactId>
+			<version>${addresshierarchyVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>htmlformentry-omod</artifactId>
-            <version>${htmlformentryVersion}</version>
-            <scope>provided</scope>
-        </dependency>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>adminui-omod</artifactId>
+			<version>${adminuiVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>htmlwidgets-omod</artifactId>
-            <version>${htmlwidgetsVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>metadatadeploy-omod</artifactId>
-            <version>${metadatadeployVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>metadatamapping-omod</artifactId>
-            <version>${metadatamappingVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>metadatasharing-omod</artifactId>
-            <version>${metadatasharingVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>reporting-omod</artifactId>
-            <version>${reportingVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>serialization.xstream-omod</artifactId>
-            <version>${serializationxstreamVersion}</version>
-            <scope>provided</scope>
-            <type>omod</type>
-        </dependency>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>allergyapi-omod</artifactId>
+			<version>${allergyapiVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>allergyui-omod</artifactId>
+			<version>${allergyuiVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>uicommons-omod</artifactId>
-            <version>${uicommonsVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>appui-omod</artifactId>
-            <version>${appuiVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>appframework-omod</artifactId>
-            <version>${appframeworkVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>uiframework-omod</artifactId>
-            <version>${uiframeworkVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>adminui-omod</artifactId>
-            <version>${adminuiVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>uilibrary-omod</artifactId>
-            <version>${uilibraryVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>providermanagement-omod</artifactId>
-            <version>${providermanagementVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>htmlformentry19ext-omod</artifactId>
-            <version>${htmlformentry19extVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>htmlformentryui-omod</artifactId>
-            <version>${htmlformentryuiVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>emrapi-omod</artifactId>
-            <version>${emrapiVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs</groupId>
-            <artifactId>event-omod</artifactId>
-            <version>${eventVersion}</version>
-            <scope>provided</scope>
-        </dependency>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>appframework-omod</artifactId>
+			<version>${appframeworkVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>referenceapplication-omod</artifactId>
-            <version>${referenceapplicationVersion}</version>
-            <scope>provided</scope>
-        </dependency>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>appointmentscheduling-omod</artifactId>
+			<version>${appointmentschedulingVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>registrationcore-omod</artifactId>
-            <version>${registrationcoreVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>registrationapp-omod</artifactId>
-            <version>${registrationappVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-       <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>coreapps-omod</artifactId>
-            <version>${coreappsVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>idgen-omod</artifactId>
-            <version>${idgenVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>referencemetadata-omod</artifactId>
-            <version>${referencemetadataVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>dataexchange-omod</artifactId>
-            <version>${dataexchangeVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>appointmentscheduling-omod</artifactId>
-            <version>${appointmentschedulingVersion}</version>
-            <scope>provided</scope>
-        </dependency>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>appointmentschedulingui-omod</artifactId>
+			<version>${appointmentschedulinguiVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>appointmentschedulingui-omod</artifactId>
-            <version>${appointmentschedulinguiVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>formentryapp-omod</artifactId>
-            <version>${formentryappVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>reportingrest-omod</artifactId>
-            <version>${reportingRestVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>allergyui-omod</artifactId>
-            <version>${allergyuiVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>allergyapi-omod</artifactId>
-            <version>${allergyapiVersion}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.openmrs.module</groupId>
-            <artifactId>chartsearch-omod</artifactId>
-            <version>${chartsearchVersion}</version>
-            <scope>provided</scope>
-        </dependency>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>appui-omod</artifactId>
+			<version>${appuiVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-    </dependencies>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>calculation-omod</artifactId>
+			<version>${calculationVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>2.8</version>
-                <executions>
-                    <execution>
-                        <id>prepare-platform-distro</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.build.directory}</outputDirectory>
-                            <artifactItems>
-                                <artifactItem>
-                                    <groupId>org.openmrs.web</groupId>
-                                    <artifactId>openmrs-webapp</artifactId>
-                                    <type>war</type>
-                                    <destFileName>${warFilename}.war</destFileName>
-                                </artifactItem>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>chartsearch-omod</artifactId>
+			<version>${chartsearchVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>webservices.rest-omod</artifactId>
-                                    <destFileName>
-                                        ${modulesFolder}/webservices.rest-${webservices.restModuleVersion}.omod
-                                    </destFileName>
-                                </artifactItem>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>coreapps-omod</artifactId>
+			<version>${coreappsVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>addresshierarchy-omod</artifactId>
-                                    <destFileName>${modulesFolder}/addresshierarchy-${addresshierarchyVersion}.omod
-                                    </destFileName>
-                                </artifactItem>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>databasebackup-omod</artifactId>
+			<version>${databaseBackupVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>aijar-omod</artifactId>
-                                    <destFileName>${modulesFolder}/aijar-${aijarVersion}.omod
-                                    </destFileName>
-                                </artifactItem>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>dataexchange-omod</artifactId>
+			<version>${dataexchangeVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>calculation-omod</artifactId>
-                                    <destFileName>${modulesFolder}/calculation-${calculationVersion}.omod</destFileName>
-                                </artifactItem>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>emrapi-omod</artifactId>
+			<version>${emrapiVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>formfilter-omod</artifactId>
-                                    <destFileName>${modulesFolder}/formfilter-${formfilterVersion}.omod</destFileName>
-                                </artifactItem>
+		<dependency>
+			<groupId>org.openmrs</groupId>
+			<artifactId>event-omod</artifactId>
+			<version>${eventVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>htmlformentry-omod</artifactId>
-                                    <destFileName>${modulesFolder}/htmlformentry-${htmlformentryVersion}.omod
-                                    </destFileName>
-                                </artifactItem>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>formentryapp-omod</artifactId>
+			<version>${formentryappVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>htmlwidgets-omod</artifactId>
-                                    <destFileName>${modulesFolder}/htmlwidgets-${htmlwidgetsVersion}.omod</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>metadatadeploy-omod</artifactId>
-                                    <destFileName>${modulesFolder}/metadatadeploy-${metadatadeployVersion}.omod
-                                    </destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>metadatamapping-omod</artifactId>
-                                    <destFileName>${modulesFolder}/metadatamapping-${metadatamappingVersion}.omod
-                                    </destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>metadatasharing-omod</artifactId>
-                                    <destFileName>${modulesFolder}/metadatasharing-${metadatasharingVersion}.omod
-                                    </destFileName>
-                                </artifactItem>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>formfilter-omod</artifactId>
+			<version>${formfilterVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>htmlformentry-omod</artifactId>
+			<version>${htmlformentryVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>reporting-omod</artifactId>
-                                    <destFileName>
-                                        ${modulesFolder}/reporting-${reportingVersion}.omod
-                                    </destFileName>
-                                </artifactItem>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>htmlformentry19ext-omod</artifactId>
+			<version>${htmlformentry19extVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>serialization.xstream-omod</artifactId>
-                                    <destFileName>
-                                        ${modulesFolder}/serialization.xstream-${serializationxstreamVersion}.omod
-                                    </destFileName>
-                                    <type>omod</type>
-                                </artifactItem>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>htmlformentryui-omod</artifactId>
+			<version>${htmlformentryuiVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>htmlwidgets-omod</artifactId>
+			<version>${htmlwidgetsVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>uicommons-omod</artifactId>
-                                    <destFileName>${modulesFolder}/uicommons-${uicommonsVersion}.omod</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>appui-omod</artifactId>
-                                    <destFileName>${modulesFolder}/appui-${appuiVersion}.omod</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>appframework-omod</artifactId>
-                                    <destFileName>${modulesFolder}/appframework-${appframeworkVersion}.omod</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>uiframework-omod</artifactId>
-                                    <destFileName>${modulesFolder}/uiframework-${uiframeworkVersion}.omod</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>adminui-omod</artifactId>
-                                    <destFileName>${modulesFolder}/adminui-${adminuiVersion}.omod</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>uilibrary-omod</artifactId>
-                                    <destFileName>${modulesFolder}/uilibrary-${uilibraryVersion}.omod</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>providermanagement-omod</artifactId>
-                                    <destFileName>${modulesFolder}/providermanagement-${providermanagementVersion}.omod</destFileName>
-                                </artifactItem>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>idgen-omod</artifactId>
+			<version>${idgenVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>htmlformentry19ext-omod</artifactId>
-                                    <destFileName>${modulesFolder}/htmlformentry19ext-${htmlformentry19extVersion}.omod</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>htmlformentryui-omod</artifactId>
-                                    <destFileName>${modulesFolder}/htmlformentryui-${htmlformentryuiVersion}.omod</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>emrapi-omod</artifactId>
-                                    <destFileName>${modulesFolder}/emrapi-${emrapiVersion}.omod</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs</groupId>
-                                    <artifactId>event-omod</artifactId>
-                                    <destFileName>${modulesFolder}/event-${eventVersion}.omod</destFileName>
-                                </artifactItem>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>metadatadeploy-omod</artifactId>
+			<version>${metadatadeployVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-                               <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>referenceapplication-omod</artifactId>
-                                    <destFileName>${modulesFolder}/referenceapplication-${referenceapplicationVersion}.omod</destFileName>
-                                </artifactItem>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>metadatamapping-omod</artifactId>
+			<version>${metadatamappingVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>registrationcore-omod</artifactId>
-                                    <destFileName>${modulesFolder}/registrationcore-${registrationcoreVersion}.omod</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>registrationapp-omod</artifactId>
-                                    <destFileName>${modulesFolder}/registrationapp-${registrationappVersion}.omod</destFileName>
-                                </artifactItem>
-                               <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>coreapps-omod</artifactId>
-                                    <destFileName>${modulesFolder}/coreapps-omod-${coreappsVersion}.omod</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>idgen-omod</artifactId>
-                                    <destFileName>${modulesFolder}/idgen-${idgenVersion}.omod</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>referencemetadata-omod</artifactId>
-                                    <destFileName>${modulesFolder}/referencemetadata-${referencemetadataVersion}.omod</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>dataexchange-omod</artifactId>
-                                    <destFileName>${modulesFolder}/dataexchange-${dataexchangeVersion}.omod</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>appointmentscheduling-omod</artifactId>
-                                    <destFileName>${modulesFolder}/appointmentscheduling-${appointmentschedulingVersion}.omod</destFileName>
-                                </artifactItem>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>metadatasharing-omod</artifactId>
+			<version>${metadatasharingVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>appointmentschedulingui-omod</artifactId>
-                                    <destFileName>${modulesFolder}/appointmentschedulingui-${appointmentschedulinguiVersion}.omod</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>formentryapp-omod</artifactId>
-                                    <destFileName>${modulesFolder}/formentryapp-${formentryappVersion}.omod</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>reportingrest-omod</artifactId>
-                                    <destFileName>${modulesFolder}/reportingrest-${reportingRestVersion}.omod</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>allergyui-omod</artifactId>
-                                    <destFileName>${modulesFolder}/allergyui-${allergyuiVersion}.omod</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>allergyapi-omod</artifactId>
-                                    <destFileName>${modulesFolder}/allergyapi-${allergyapiVersion}.omod</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>org.openmrs.module</groupId>
-                                    <artifactId>chartsearch-omod</artifactId>
-                                    <destFileName>${modulesFolder}/chartsearch-${chartsearchVersion}.omod</destFileName>
-                                </artifactItem>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>providermanagement-omod</artifactId>
+			<version>${providermanagementVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-                            </artifactItems>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>referenceapplication-omod</artifactId>
+			<version>${referenceapplicationVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>2.6</version>
-                <executions>
-                    <execution>
-                        <id>copy-resources</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.build.directory}</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>scripts</directory>
-                                    <filtering>true</filtering>
-                                    <includes>
-                                        <include>${scriptFilename}</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-                    <!-- Copy the omods in the modules directory which are not downloadable from http://mavenrepo.openmrs.org/nexus -->
-                    <execution>
-                        <id>copy-downloaded-modules</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.build.directory}/WEB-INF/bundledModules</outputDirectory>
-                            <!-- prevent corruption of binary files by filtering activity which may be needed -->
-                            <nonFilteredFileExtensions>
-                                <nonFilteredFileExtension>jar</nonFilteredFileExtension>
-                                <nonFilteredFileExtension>omod</nonFilteredFileExtension>
-                            </nonFilteredFileExtensions>
-                            <resources>
-                                <resource>
-                                    <directory>modules</directory>
-                                    <filtering>true</filtering>
-                                    <includes>
-                                        <include>*.omod</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>referencemetadata-omod</artifactId>
+			<version>${referencemetadataVersion}</version>
+			<scope>provided</scope>
+		</dependency>
 
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.3.1</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <executable>/bin/bash</executable>
-                            <workingDirectory>${project.build.directory}</workingDirectory>
-                            <arguments>
-                                <argument>${scriptFilename}</argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>registrationapp-omod</artifactId>
+			<version>${registrationappVersion}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>registrationcore-omod</artifactId>
+			<version>${registrationcoreVersion}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>reporting-omod</artifactId>
+			<version>${reportingVersion}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>reportingrest-omod</artifactId>
+			<version>${reportingRestVersion}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>serialization.xstream-omod</artifactId>
+			<version>${serializationxstreamVersion}</version>
+			<scope>provided</scope>
+			<type>omod</type>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>uicommons-omod</artifactId>
+			<version>${uicommonsVersion}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>uiframework-omod</artifactId>
+			<version>${uiframeworkVersion}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>uilibrary-omod</artifactId>
+			<version>${uilibraryVersion}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>xforms-omod</artifactId>
+			<version>${xformsVersion}</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.8</version>
+				<executions>
+					<execution>
+						<id>prepare-platform-distro</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}</outputDirectory>
+							<artifactItems>
+								<artifactItem>
+									<groupId>org.openmrs.web</groupId>
+									<artifactId>openmrs-webapp</artifactId>
+									<type>war</type>
+									<destFileName>${warFilename}.war</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>webservices.rest-omod</artifactId>
+									<destFileName>
+										${modulesFolder}/webservices.rest-${webservices.restModuleVersion}.omod
+									</destFileName>
+								</artifactItem>
+
+								<!-- Custom modules -->
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>addresshierarchy-omod</artifactId>
+									<destFileName>${modulesFolder}/addresshierarchy-${addresshierarchyVersion}.omod
+									</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>adminui-omod</artifactId>
+									<destFileName>${modulesFolder}/adminui-${adminuiVersion}.omod</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>aijar-omod</artifactId>
+									<destFileName>${modulesFolder}/aijar-${aijarVersion}.omod
+									</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>allergyapi-omod</artifactId>
+									<destFileName>${modulesFolder}/allergyapi-${allergyapiVersion}.omod</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>allergyui-omod</artifactId>
+									<destFileName>${modulesFolder}/allergyui-${allergyuiVersion}.omod</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>appframework-omod</artifactId>
+									<destFileName>${modulesFolder}/appframework-${appframeworkVersion}.omod</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>appointmentscheduling-omod</artifactId>
+									<destFileName>
+										${modulesFolder}/appointmentscheduling-${appointmentschedulingVersion}.omod
+									</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>appointmentschedulingui-omod</artifactId>
+									<destFileName>
+										${modulesFolder}/appointmentschedulingui-${appointmentschedulinguiVersion}.omod
+									</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>appui-omod</artifactId>
+									<destFileName>${modulesFolder}/appui-${appuiVersion}.omod</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>calculation-omod</artifactId>
+									<destFileName>${modulesFolder}/calculation-${calculationVersion}.omod</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>chartsearch-omod</artifactId>
+									<destFileName>${modulesFolder}/chartsearch-${chartsearchVersion}.omod</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>coreapps-omod</artifactId>
+									<destFileName>${modulesFolder}/coreapps-omod-${coreappsVersion}.omod</destFileName>
+								</artifactItem>
+
+								<!--<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>databasebackup-omod</artifactId>
+									<destFileName>${modulesFolder}/databasebackup-${databaseBackupVersion}.omod
+									</destFileName>
+								</artifactItem>-->
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>dataexchange-omod</artifactId>
+									<destFileName>${modulesFolder}/dataexchange-${dataexchangeVersion}.omod</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>emrapi-omod</artifactId>
+									<destFileName>${modulesFolder}/emrapi-${emrapiVersion}.omod</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs</groupId>
+									<artifactId>event-omod</artifactId>
+									<destFileName>${modulesFolder}/event-${eventVersion}.omod</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>formentryapp-omod</artifactId>
+									<destFileName>${modulesFolder}/formentryapp-${formentryappVersion}.omod</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>formfilter-omod</artifactId>
+									<destFileName>${modulesFolder}/formfilter-${formfilterVersion}.omod</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>htmlformentry-omod</artifactId>
+									<destFileName>${modulesFolder}/htmlformentry-${htmlformentryVersion}.omod
+									</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>htmlformentry19ext-omod</artifactId>
+									<destFileName>${modulesFolder}/htmlformentry19ext-${htmlformentry19extVersion}.omod
+									</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>htmlformentryui-omod</artifactId>
+									<destFileName>${modulesFolder}/htmlformentryui-${htmlformentryuiVersion}.omod
+									</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>htmlwidgets-omod</artifactId>
+									<destFileName>${modulesFolder}/htmlwidgets-${htmlwidgetsVersion}.omod</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>idgen-omod</artifactId>
+									<destFileName>${modulesFolder}/idgen-${idgenVersion}.omod</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>metadatadeploy-omod</artifactId>
+									<destFileName>${modulesFolder}/metadatadeploy-${metadatadeployVersion}.omod
+									</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>metadatamapping-omod</artifactId>
+									<destFileName>${modulesFolder}/metadatamapping-${metadatamappingVersion}.omod
+									</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>metadatasharing-omod</artifactId>
+									<destFileName>${modulesFolder}/metadatasharing-${metadatasharingVersion}.omod
+									</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>providermanagement-omod</artifactId>
+									<destFileName>${modulesFolder}/providermanagement-${providermanagementVersion}.omod
+									</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>referenceapplication-omod</artifactId>
+									<destFileName>${modulesFolder}/referenceapplication-${referenceapplicationVersion}.omod
+									</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>referencemetadata-omod</artifactId>
+									<destFileName>${modulesFolder}/referencemetadata-${referencemetadataVersion}.omod
+									</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>registrationcore-omod</artifactId>
+									<destFileName>${modulesFolder}/registrationcore-${registrationcoreVersion}.omod
+									</destFileName>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>registrationapp-omod</artifactId>
+									<destFileName>${modulesFolder}/registrationapp-${registrationappVersion}.omod
+									</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>reporting-omod</artifactId>
+									<destFileName>
+										${modulesFolder}/reporting-${reportingVersion}.omod
+									</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>reportingrest-omod</artifactId>
+									<destFileName>${modulesFolder}/reportingrest-${reportingRestVersion}.omod</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>serialization.xstream-omod</artifactId>
+									<destFileName>
+										${modulesFolder}/serialization.xstream-${serializationxstreamVersion}.omod
+									</destFileName>
+									<type>omod</type>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>uiframework-omod</artifactId>
+									<destFileName>${modulesFolder}/uiframework-${uiframeworkVersion}.omod</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>uicommons-omod</artifactId>
+									<destFileName>${modulesFolder}/uicommons-${uicommonsVersion}.omod</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>uilibrary-omod</artifactId>
+									<destFileName>${modulesFolder}/uilibrary-${uilibraryVersion}.omod</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>xforms-omod</artifactId>
+									<destFileName>${modulesFolder}/xforms-${xformsVersion}.omod</destFileName>
+								</artifactItem>
+
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}</outputDirectory>
+							<resources>
+								<resource>
+									<directory>scripts</directory>
+									<filtering>true</filtering>
+									<includes>
+										<include>${scriptFilename}</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<!-- Copy the omods in the modules directory which are not downloadable from http://mavenrepo.openmrs.org/nexus -->
+					<execution>
+						<id>copy-downloaded-modules</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/WEB-INF/bundledModules</outputDirectory>
+							<!-- prevent corruption of binary files by filtering activity which may be needed -->
+							<nonFilteredFileExtensions>
+								<nonFilteredFileExtension>jar</nonFilteredFileExtension>
+								<nonFilteredFileExtension>omod</nonFilteredFileExtension>
+							</nonFilteredFileExtensions>
+							<resources>
+								<resource>
+									<directory>modules</directory>
+									<filtering>true</filtering>
+									<includes>
+										<include>*.omod</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.3.1</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>/bin/bash</executable>
+							<workingDirectory>${project.build.directory}</workingDirectory>
+							<arguments>
+								<argument>${scriptFilename}</argument>
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
