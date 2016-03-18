@@ -517,12 +517,12 @@
 									<destFileName>${modulesFolder}/formfilter-${formfilterVersion}.omod</destFileName>
 								</artifactItem>
 
-								<artifactItem>
+								<!--<artifactItem>
 									<groupId>org.openmrs.module</groupId>
 									<artifactId>htmlformentry-omod</artifactId>
 									<destFileName>${modulesFolder}/htmlformentry-${htmlformentryVersion}.omod
 									</destFileName>
-								</artifactItem>
+								</artifactItem>-->
 
 								<artifactItem>
 									<groupId>org.openmrs.module</groupId>
