@@ -71,6 +71,7 @@
 		<registrationcoreVersion>1.3</registrationcoreVersion>
 		<reportingRestVersion>1.6</reportingRestVersion>
 		<reportingVersion>0.9.9</reportingVersion>
+		<reportingCompatibilityVersion>1.5.8</reportingCompatibilityVersion>
 		<reportingUIVersion>1.1</reportingUIVersion>
 		<serializationxstreamVersion>0.2.10</serializationxstreamVersion>
 		<uicommonsVersion>1.8</uicommonsVersion>
@@ -333,6 +334,14 @@
 			<version>${reportingVersion}</version>
 			<scope>provided</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>reportingcompatibility-omod</artifactId>
+			<version>${reportingCompatibilityVersion}</version>
+			<scope>provided</scope>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.openmrs.module</groupId>
@@ -633,6 +642,14 @@
 									<artifactId>reporting-omod</artifactId>
 									<destFileName>
 										${modulesFolder}/reporting-${reportingVersion}.omod
+									</destFileName>
+								</artifactItem>
+
+								<artifactItem>
+									<groupId>org.openmrs.module</groupId>
+									<artifactId>reportingcompatibility-omod</artifactId>
+									<destFileName>
+										${modulesFolder}/reportingcompatibility-${reportingCompatibilityVersion}.omod
 									</destFileName>
 								</artifactItem>
 
