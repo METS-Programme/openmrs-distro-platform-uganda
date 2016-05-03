@@ -49,7 +49,7 @@
 		<calculationVersion>1.1</calculationVersion>
 		<chartsearchVersion>1.4.1</chartsearchVersion>
 		<coreappsVersion>1.10-SNAPSHOT</coreappsVersion>
-		<databaseBackupVersion>1.2.2</databaseBackupVersion>
+		<databaseBackupVersion>1.2.4</databaseBackupVersion>
 		<dataexchangeVersion>1.3.2</dataexchangeVersion>
 		<emrapiVersion>1.13</emrapiVersion>
 		<eventVersion>2.3</eventVersion>
