@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.openmrs.distro</groupId>
 	<artifactId>platform-uganda</artifactId>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.0.2</version>
 	<packaging>pom</packaging>
 	<name>Uganda OpenMRS Platform</name>
 	<description>A project for packaging the custom OpenMRS Platform distribution for Uganda</description>
@@ -27,7 +27,7 @@
 		<connection>scm:git:https://github.com/ssmusoke/openmrs-distro-platform-uganda</connection>
 		<developerConnection>scm:git:https://github.com/ssmusoke/openmrs-distro-platform-uganda</developerConnection>
 		<url>https://github.com/ssmusoke/openmrs-distro-platform-uganda</url>
-	  <tag>HEAD</tag>
+	  <tag>1.0.2</tag>
   </scm>
 
 	<properties>
