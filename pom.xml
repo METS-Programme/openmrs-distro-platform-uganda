@@ -645,13 +645,13 @@
 									</destFileName>
 								</artifactItem>
 
-								<artifactItem>
+							<!--	<artifactItem>
 									<groupId>org.openmrs.module</groupId>
 									<artifactId>reportingcompatibility-omod</artifactId>
 									<destFileName>
 										${modulesFolder}/reportingcompatibility-${reportingCompatibilityVersion}.omod
 									</destFileName>
-								</artifactItem>
+								</artifactItem>-->
 
 								<artifactItem>
 									<groupId>org.openmrs.module</groupId>
