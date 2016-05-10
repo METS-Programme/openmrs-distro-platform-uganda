@@ -80,7 +80,7 @@
 		<xformsVersion>4.3.8-SNAPSHOT</xformsVersion>
 
 		<!-- core configuration library -->
-		<aijarVersion>1.0.7</aijarVersion>
+		<aijarVersion>1.0.8-SNAPSHOT</aijarVersion>
 
 		<!-- platform configurations -->
 		<warFilename>openmrs</warFilename>
