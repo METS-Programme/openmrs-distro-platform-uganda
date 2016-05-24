@@ -82,6 +82,7 @@
 
 		<!-- core configuration library -->
 		<aijarVersion>1.0.9</aijarVersion>
+		<!--<aijarReportsVersion>1.0-SNAPSHOT</aijarReportsVersion>-->
 
 		<!-- platform configurations -->
 		<warFilename>openmrs</warFilename>
@@ -112,12 +113,12 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<dependency>
+		<!--<dependency>
 			<groupId>org.openmrs.module</groupId>
 			<artifactId>aijar-reports-omod</artifactId>
 			<version>${aijarReportsVersion}</version>
 			<scope>provided</scope>
-		</dependency>
+		</dependency>-->
 
 		<dependency>
 			<groupId>org.openmrs.module</groupId>
