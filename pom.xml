@@ -463,12 +463,12 @@
 									</destFileName>
 								</artifactItem>
 
-								<artifactItem>
+								<!--<artifactItem>
 									<groupId>org.openmrs.module</groupId>
 									<artifactId>aijar-reports-omod</artifactId>
 									<destFileName>${modulesFolder}/aijar-reports-${aijarReportsVersion}.omod
 									</destFileName>
-								</artifactItem>
+								</artifactItem>-->
 
 								<artifactItem>
 									<groupId>org.openmrs.module</groupId>
