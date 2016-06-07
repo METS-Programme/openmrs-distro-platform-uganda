@@ -52,7 +52,7 @@
 		<coreappsVersion>1.10-SNAPSHOT</coreappsVersion>
 		<databaseBackupVersion>1.2.4</databaseBackupVersion>
 		<dataexchangeVersion>1.3.2</dataexchangeVersion>
-		<dataintegrityVersion>3.0-SNAPSHOT</dataintegrityVersion>
+		<dataintegrityVersion>3.0</dataintegrityVersion>
 		<emrapiVersion>1.13</emrapiVersion>
 		<eventVersion>2.3</eventVersion>
 		<formentryappVersion>1.2</formentryappVersion>
