@@ -34,27 +34,27 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<openMRSVersion>1.11.7-SNAPSHOT</openMRSVersion>
-		<webservices.restModuleVersion>2.12</webservices.restModuleVersion>
+		<webservices.restModuleVersion>2.14</webservices.restModuleVersion>
 
 		<!-- Modules Bundled for Uganda distribution  -->
 		<!-- TODO: Arrange the dependencies and variables in alphabetical order -->
 		<!-- TODO: Remove dependencies on API where omods are available -->
-		<adminuiVersion>1.0</adminuiVersion>
+		<adminuiVersion>1.1</adminuiVersion>
 		<addresshierarchyVersion>2.8</addresshierarchyVersion>
 		<allergyapiVersion>1.4</allergyapiVersion>
 		<allergyuiVersion>1.5</allergyuiVersion>
 		<appframeworkVersion>2.8</appframeworkVersion>
 		<appuiVersion>1.5.1</appuiVersion>
-		<appointmentschedulingVersion>1.4</appointmentschedulingVersion>
-		<appointmentschedulinguiVersion>1.1</appointmentschedulinguiVersion>
+		<appointmentschedulingVersion>1.5</appointmentschedulingVersion>
+		<appointmentschedulinguiVersion>1.3</appointmentschedulinguiVersion>
 		<calculationVersion>1.1</calculationVersion>
 		<chartsearchVersion>1.4.1</chartsearchVersion>
 		<coreappsVersion>1.11-SNAPSHOT</coreappsVersion>
 		<databaseBackupVersion>1.2.4</databaseBackupVersion>
 		<dataexchangeVersion>1.3.2</dataexchangeVersion>
 		<dataintegrityVersion>3.0</dataintegrityVersion>
-		<emrapiVersion>1.13</emrapiVersion>
-		<eventVersion>2.3</eventVersion>
+		<emrapiVersion>1.14</emrapiVersion>
+		<eventVersion>2.4</eventVersion>
 		<formentryappVersion>1.2</formentryappVersion>
 		<formfilterVersion>1.0.0</formfilterVersion>
 		<htmlformentry19extVersion>1.7</htmlformentry19extVersion>
@@ -68,12 +68,12 @@
 		<openconceptlabVersion>1.1</openconceptlabVersion>
 		<patientSummaryVersion>2.1</patientSummaryVersion>
 		<providermanagementVersion>2.4</providermanagementVersion>
-		<referenceapplicationVersion>2.4-SNAPSHOT</referenceapplicationVersion>
-		<referencemetadataVersion>2.3.1</referencemetadataVersion>
-		<registrationappVersion>1.4</registrationappVersion>
-		<registrationcoreVersion>1.3</registrationcoreVersion>
+		<referenceapplicationVersion>2.4</referenceapplicationVersion>
+		<referencemetadataVersion>2.4</referencemetadataVersion>
+		<registrationappVersion>1.5</registrationappVersion>
+		<registrationcoreVersion>1.4</registrationcoreVersion>
 		<reportingRestVersion>1.6</reportingRestVersion>
-		<reportingVersion>0.9.9</reportingVersion>
+		<reportingVersion>0.10.0</reportingVersion>
 		<reportingCompatibilityVersion>1.5.8</reportingCompatibilityVersion>
 		<reportingUIVersion>1.1</reportingUIVersion>
 		<serializationxstreamVersion>0.2.10</serializationxstreamVersion>
@@ -83,7 +83,7 @@
 		<xformsVersion>4.3.8-SNAPSHOT</xformsVersion>
 
 		<!-- core configuration library -->
-		<aijarVersion>1.0.10-SNAPSHOT</aijarVersion>
+		<aijarVersion>1.0.11</aijarVersion>
 		<!--<aijarReportsVersion>1.0-SNAPSHOT</aijarReportsVersion>-->
 
 		<!-- platform configurations -->
