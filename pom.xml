@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.openmrs.distro</groupId>
@@ -18,15 +19,15 @@
 
 	<organization>
 		<name>Monitoring and Evaluation Technical Support Project collaboration between Makerere School of Public Health
-			and University of Carlifonia San Francisco (UCSF)
+			and University of California San Francisco (UCSF)
 		</name>
 		<url>http://mets.or.ug</url>
 	</organization>
 
 	<scm>
-		<connection>scm:git:https://github.com/ssmusoke/openmrs-distro-platform-uganda</connection>
-		<developerConnection>scm:git:https://github.com/ssmusoke/openmrs-distro-platform-uganda</developerConnection>
-		<url>https://github.com/ssmusoke/openmrs-distro-platform-uganda</url>
+		<connection>scm:git:https://github.com/METS-Programme/openmrs-distro-platform-uganda</connection>
+		<developerConnection>scm:git:https://github.com/METS-Programme/openmrs-distro-platform-uganda</developerConnection>
+		<url>https://github.com/METS-Programme/openmrs-distro-platform-uganda</url>
 	  <tag>HEAD</tag>
   </scm>
 
