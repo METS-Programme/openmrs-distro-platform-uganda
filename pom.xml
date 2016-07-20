@@ -83,7 +83,7 @@
 		<xformsVersion>4.3.8-SNAPSHOT</xformsVersion>
 
 		<!-- core configuration library -->
-		<aijarVersion>1.0.11</aijarVersion>
+		<aijarVersion>1.0.12-SNAPSHOT</aijarVersion>
 		<!--<aijarReportsVersion>1.0-SNAPSHOT</aijarReportsVersion>-->
 
 		<!-- platform configurations -->
