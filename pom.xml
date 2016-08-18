@@ -40,7 +40,7 @@
 		<!-- TODO: Arrange the dependencies and variables in alphabetical order -->
 		<!-- TODO: Remove dependencies on API where omods are available -->
 		<adminuiVersion>1.1</adminuiVersion>
-		<addresshierarchyVersion>2.8</addresshierarchyVersion>
+		<addresshierarchyVersion>2.9</addresshierarchyVersion>
 		<allergyapiVersion>1.4</allergyapiVersion>
 		<allergyuiVersion>1.5</allergyuiVersion>
 		<appframeworkVersion>2.8</appframeworkVersion>
@@ -52,7 +52,7 @@
 		<coreappsVersion>1.11-SNAPSHOT</coreappsVersion>
 		<databaseBackupVersion>1.2.4</databaseBackupVersion>
 		<dataexchangeVersion>1.3.2</dataexchangeVersion>
-		<dataintegrityVersion>3.0</dataintegrityVersion>
+		<dataintegrityVersion>4.0</dataintegrityVersion>
 		<emrapiVersion>1.16</emrapiVersion>
 		<eventVersion>2.4</eventVersion>
 		<formentryappVersion>1.2</formentryappVersion>
@@ -70,17 +70,17 @@
 		<providermanagementVersion>2.4</providermanagementVersion>
 		<referenceapplicationVersion>2.5-SNAPSHOT</referenceapplicationVersion>
 		<referencemetadataVersion>2.5-SNAPSHOT</referencemetadataVersion>
-		<registrationappVersion>1.5</registrationappVersion>
-		<registrationcoreVersion>1.4</registrationcoreVersion>
+		<registrationappVersion>1.6-SNAPSHOT</registrationappVersion>
+		<registrationcoreVersion>1.5</registrationcoreVersion>
 		<reportingRestVersion>1.6</reportingRestVersion>
 		<reportingVersion>0.10.0</reportingVersion>
-		<reportingCompatibilityVersion>1.5.8</reportingCompatibilityVersion>
+		<reportingCompatibilityVersion>1.5.9</reportingCompatibilityVersion>
 		<reportingUIVersion>1.1</reportingUIVersion>
 		<serializationxstreamVersion>0.2.10</serializationxstreamVersion>
 		<uicommonsVersion>1.8</uicommonsVersion>
 		<uiframeworkVersion>3.6</uiframeworkVersion>
 		<uilibraryVersion>2.0.4</uilibraryVersion>
-		<xformsVersion>4.3.8-SNAPSHOT</xformsVersion>
+		<xformsVersion>4.3.9</xformsVersion>
 
 		<!-- core configuration library -->
 		<aijarVersion>1.0.12-SNAPSHOT</aijarVersion>
@@ -212,14 +212,14 @@
 			<version>${dataexchangeVersion}</version>
 			<scope>provided</scope>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>org.openmrs.module</groupId>
 			<artifactId>dataintegrity-omod</artifactId>
 			<version>${dataintegrityVersion}</version>
 			<scope>provided</scope>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>org.openmrs.module</groupId>
 			<artifactId>emrapi-omod</artifactId>
@@ -549,13 +549,13 @@
 									<artifactId>dataexchange-omod</artifactId>
 									<destFileName>${modulesFolder}/dataexchange-${dataexchangeVersion}.omod</destFileName>
 								</artifactItem>
-
+								
 								<artifactItem>
 									<groupId>org.openmrs.module</groupId>
 									<artifactId>dataintegrity-omod</artifactId>
 									<destFileName>${modulesFolder}/dataintegrity-${dataintegrityVersion}.omod</destFileName>
 								</artifactItem>
-
+								
 								<artifactItem>
 									<groupId>org.openmrs.module</groupId>
 									<artifactId>emrapi-omod</artifactId>
@@ -579,13 +579,13 @@
 									<artifactId>formfilter-omod</artifactId>
 									<destFileName>${modulesFolder}/formfilter-${formfilterVersion}.omod</destFileName>
 								</artifactItem>
-
-								<!--<artifactItem>
+								
+								<artifactItem>
 									<groupId>org.openmrs.module</groupId>
 									<artifactId>htmlformentry-omod</artifactId>
 									<destFileName>${modulesFolder}/htmlformentry-${htmlformentryVersion}.omod
 									</destFileName>
-								</artifactItem>-->
+								</artifactItem>
 
 								<artifactItem>
 									<groupId>org.openmrs.module</groupId>
@@ -593,13 +593,13 @@
 									<destFileName>${modulesFolder}/htmlformentry19ext-${htmlformentry19extVersion}.omod
 									</destFileName>
 								</artifactItem>
-
-								<!--<artifactItem>
+								
+								<artifactItem>
 									<groupId>org.openmrs.module</groupId>
 									<artifactId>htmlformentryui-omod</artifactId>
 									<destFileName>${modulesFolder}/htmlformentryui-${htmlformentryuiVersion}.omod
 									</destFileName>
-								</artifactItem>-->
+								</artifactItem>
 
 								<artifactItem>
 									<groupId>org.openmrs.module</groupId>
@@ -668,13 +668,14 @@
 									<destFileName>${modulesFolder}/referencemetadata-${referencemetadataVersion}.omod
 									</destFileName>
 								</artifactItem>
-
-								<!--<artifactItem>
+								
+								<artifactItem>
 									<groupId>org.openmrs.module</groupId>
 									<artifactId>registrationcore-omod</artifactId>
 									<destFileName>${modulesFolder}/registrationcore-${registrationcoreVersion}.omod
 									</destFileName>
-								</artifactItem>-->
+								</artifactItem>
+								
 								<artifactItem>
 									<groupId>org.openmrs.module</groupId>
 									<artifactId>registrationapp-omod</artifactId>
