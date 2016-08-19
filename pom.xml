@@ -75,7 +75,7 @@
 		<reportingRestVersion>1.6</reportingRestVersion>
 		<reportingVersion>0.10.0</reportingVersion>
 		<reportingCompatibilityVersion>1.5.9</reportingCompatibilityVersion>
-		<reportingUIVersion>1.1</reportingUIVersion>
+		<reportingUIVersion>1.2</reportingUIVersion>
 		<serializationxstreamVersion>0.2.10</serializationxstreamVersion>
 		<uicommonsVersion>1.8</uicommonsVersion>
 		<uiframeworkVersion>3.6</uiframeworkVersion>
@@ -690,14 +690,14 @@
 										${modulesFolder}/reporting-${reportingVersion}.omod
 									</destFileName>
 								</artifactItem>
-
-							<!--	<artifactItem>
+								
+								<artifactItem>
 									<groupId>org.openmrs.module</groupId>
 									<artifactId>reportingcompatibility-omod</artifactId>
 									<destFileName>
 										${modulesFolder}/reportingcompatibility-${reportingCompatibilityVersion}.omod
 									</destFileName>
-								</artifactItem>-->
+								</artifactItem>
 
 								<artifactItem>
 									<groupId>org.openmrs.module</groupId>
