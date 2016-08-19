@@ -58,8 +58,8 @@
 		<formentryappVersion>1.2</formentryappVersion>
 		<formfilterVersion>1.0.0</formfilterVersion>
 		<htmlformentry19extVersion>1.7</htmlformentry19extVersion>
-		<htmlformentryuiVersion>1.5</htmlformentryuiVersion>
-		<htmlformentryVersion>3.2</htmlformentryVersion>
+		<htmlformentryuiVersion>1.6-SNAPSHOT</htmlformentryuiVersion>
+		<htmlformentryVersion>3.3-SNAPSHOT</htmlformentryVersion>
 		<htmlwidgetsVersion>1.7.2</htmlwidgetsVersion>
 		<idgenVersion>4.3</idgenVersion>
 		<metadatadeployVersion>1.7</metadatadeployVersion>
