@@ -84,7 +84,7 @@
 
 		<!-- core configuration library -->
 		<aijarVersion>1.0.12</aijarVersion>
-		<!--<aijarReportsVersion>1.0-SNAPSHOT</aijarReportsVersion>-->
+		<ugandaemrReportsVersion>1.0.2</ugandaemrReportsVersion>
 
 		<!-- platform configurations -->
 		<warFilename>openmrs</warFilename>
@@ -114,13 +114,13 @@
 			<version>${aijarVersion}</version>
 			<scope>provided</scope>
 		</dependency>
-
-		<!--<dependency>
+		
+		<dependency>
 			<groupId>org.openmrs.module</groupId>
-			<artifactId>aijar-reports-omod</artifactId>
-			<version>${aijarReportsVersion}</version>
+			<artifactId>ugandaemrreports-omod</artifactId>
+			<version>${ugandaemrReportsVersion}</version>
 			<scope>provided</scope>
-		</dependency>-->
+		</dependency>
 
 		<dependency>
 			<groupId>org.openmrs.module</groupId>
@@ -471,13 +471,13 @@
 									<destFileName>${modulesFolder}/aijar-${aijarVersion}.omod
 									</destFileName>
 								</artifactItem>
-
-								<!--<artifactItem>
+								
+								<artifactItem>
 									<groupId>org.openmrs.module</groupId>
-									<artifactId>aijar-reports-omod</artifactId>
-									<destFileName>${modulesFolder}/aijar-reports-${aijarReportsVersion}.omod
+									<artifactId>ugandaemrreports-omod</artifactId>
+									<destFileName>${modulesFolder}/ugandaemrreports-${ugandaemrReportsVersion}.omod
 									</destFileName>
-								</artifactItem>-->
+								</artifactItem>
 
 								<artifactItem>
 									<groupId>org.openmrs.module</groupId>
