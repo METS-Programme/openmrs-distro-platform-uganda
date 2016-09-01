@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.openmrs.distro</groupId>
@@ -51,7 +52,7 @@
 		<coreappsVersion>1.11-SNAPSHOT</coreappsVersion>
 		<databaseBackupVersion>1.2.4</databaseBackupVersion>
 		<dataexchangeVersion>1.3.2</dataexchangeVersion>
-		<dataintegrityVersion>4.0</dataintegrityVersion>
+		<dataintegrityVersion>4.1-SNAPSHOT</dataintegrityVersion>
 		<emrapiVersion>1.16</emrapiVersion>
 		<eventVersion>2.4</eventVersion>
 		<formentryappVersion>1.2</formentryappVersion>
@@ -82,8 +83,8 @@
 		<xformsVersion>4.3.9</xformsVersion>
 
 		<!-- core configuration library -->
-		<aijarVersion>1.0.12</aijarVersion>
-		<ugandaemrReportsVersion>1.0.2</ugandaemrReportsVersion>
+		<aijarVersion>1.0.13-SNAPSHOT</aijarVersion>
+		<ugandaemrReportsVersion>1.0.3-SNAPSHOT</ugandaemrReportsVersion>
 
 		<!-- platform configurations -->
 		<warFilename>openmrs</warFilename>
@@ -416,7 +417,6 @@
 			<version>${xformsVersion}</version>
 			<scope>provided</scope>
 		</dependency>
-
 	</dependencies>
 
 	<build>
