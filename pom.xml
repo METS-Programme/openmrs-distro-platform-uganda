@@ -78,7 +78,7 @@
 		<reportingUIVersion>1.2</reportingUIVersion>
 		<serializationxstreamVersion>0.2.10</serializationxstreamVersion>
 		<uicommonsVersion>1.8</uicommonsVersion>
-		<uiframeworkVersion>3.6</uiframeworkVersion>
+		<uiframeworkVersion>3.8-SNAPSHOT</uiframeworkVersion>
 		<uilibraryVersion>2.0.4</uilibraryVersion>
 		<xformsVersion>4.3.9</xformsVersion>
 
