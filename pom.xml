@@ -83,7 +83,7 @@
 		<xformsVersion>4.3.9</xformsVersion>
 
 		<!-- core configuration library -->
-		<aijarVersion>1.0.13</aijarVersion>
+		<aijarVersion>1.0.14-SNAPSHOT</aijarVersion>
 		<ugandaemrReportsVersion>1.0.3-SNAPSHOT</ugandaemrReportsVersion>
 
 		<!-- platform configurations -->
