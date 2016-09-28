@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.openmrs.distro</groupId>
@@ -49,7 +50,7 @@
 		<calculationVersion>1.1</calculationVersion>
 		<chartsearchVersion>1.6</chartsearchVersion>
 		<coreappsVersion>1.11.0</coreappsVersion>
-		<databaseBackupVersion>1.2.4</databaseBackupVersion>
+		<databaseBackupVersion>1.2.5</databaseBackupVersion>
 		<dataexchangeVersion>1.3.2</dataexchangeVersion>
 		<dataintegrityVersion>4.1-SNAPSHOT</dataintegrityVersion>
 		<emrapiVersion>1.16</emrapiVersion>
@@ -58,7 +59,7 @@
 		<formfilterVersion>1.0.0</formfilterVersion>
 		<htmlformentry19extVersion>1.7</htmlformentry19extVersion>
 		<htmlformentryuiVersion>1.6-SNAPSHOT</htmlformentryuiVersion>
-		<htmlformentryVersion>3.3-SNAPSHOT</htmlformentryVersion>
+		<htmlformentryVersion>3.3.0</htmlformentryVersion>
 		<htmlwidgetsVersion>1.7.2</htmlwidgetsVersion>
 		<idgenVersion>4.3</idgenVersion>
 		<metadatadeployVersion>1.7</metadatadeployVersion>
