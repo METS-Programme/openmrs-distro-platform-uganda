@@ -44,7 +44,7 @@
 		<allergyapiVersion>1.4</allergyapiVersion>
 		<allergyuiVersion>1.5</allergyuiVersion>
 		<appframeworkVersion>2.9</appframeworkVersion>
-		<appuiVersion>1.6</appuiVersion>
+		<appuiVersion>1.7</appuiVersion>
 		<appointmentschedulingVersion>1.5</appointmentschedulingVersion>
 		<appointmentschedulinguiVersion>1.3</appointmentschedulinguiVersion>
 		<calculationVersion>1.2</calculationVersion>
@@ -73,11 +73,11 @@
 		<registrationappVersion>1.6</registrationappVersion>
 		<registrationcoreVersion>1.6</registrationcoreVersion>
 		<reportingRestVersion>1.6</reportingRestVersion>
-		<reportingVersion>0.10.0</reportingVersion>
+		<reportingVersion>0.10.4</reportingVersion>
 		<reportingCompatibilityVersion>1.5.10</reportingCompatibilityVersion>
 		<reportingUIVersion>1.2</reportingUIVersion>
 		<serializationxstreamVersion>0.2.12</serializationxstreamVersion>
-		<uicommonsVersion>1.9</uicommonsVersion>
+		<uicommonsVersion>2.1</uicommonsVersion>
 		<uiframeworkVersion>3.9</uiframeworkVersion>
 		<uilibraryVersion>2.0.4</uilibraryVersion>
 		<xformsVersion>4.3.9</xformsVersion>
