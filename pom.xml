@@ -52,7 +52,7 @@
 		<coreappsVersion>1.11.1</coreappsVersion>
 		<databaseBackupVersion>1.2.5</databaseBackupVersion>
 		<dataexchangeVersion>1.3.2</dataexchangeVersion>
-		<dataintegrityVersion>4.2.0-SNAPSHOT</dataintegrityVersion>
+		<dataintegrityVersion>4.1.0</dataintegrityVersion>
 		<emrapiVersion>1.18</emrapiVersion>
 		<eventVersion>2.5</eventVersion>
 		<formentryappVersion>1.2</formentryappVersion>
@@ -69,8 +69,8 @@
 		<openwebappsVersion>1.6.2</openwebappsVersion>
 		<patientSummaryVersion>2.1</patientSummaryVersion>
 		<providermanagementVersion>2.4</providermanagementVersion>
-		<referenceapplicationVersion>2.5-SNAPSHOT</referenceapplicationVersion>
-		<referencemetadataVersion>2.5-SNAPSHOT</referencemetadataVersion>
+		<referenceapplicationVersion>2.5</referenceapplicationVersion>
+		<referencemetadataVersion>2.5.0</referencemetadataVersion>
 		<registrationappVersion>1.6</registrationappVersion>
 		<registrationcoreVersion>1.6</registrationcoreVersion>
 		<reportingRestVersion>1.6</reportingRestVersion>
