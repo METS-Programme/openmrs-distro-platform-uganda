@@ -49,7 +49,7 @@
 		<appointmentschedulinguiVersion>1.3</appointmentschedulinguiVersion>
 		<calculationVersion>1.2</calculationVersion>
 		<chartsearchVersion>1.6</chartsearchVersion>
-		<coreappsVersion>1.11.1</coreappsVersion>
+		<coreappsVersion>1.11.2-SNAPSHOT</coreappsVersion>
 		<databaseBackupVersion>1.2.5</databaseBackupVersion>
 		<dataexchangeVersion>1.3.2</dataexchangeVersion>
 		<dataintegrityVersion>4.1.0</dataintegrityVersion>
