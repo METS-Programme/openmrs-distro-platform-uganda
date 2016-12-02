@@ -59,7 +59,7 @@
 		<formfilterVersion>1.0.0</formfilterVersion>
 		<htmlformentry19extVersion>1.7</htmlformentry19extVersion>
 		<htmlformentryuiVersion>1.6.1</htmlformentryuiVersion>
-		<htmlformentryVersion>3.3.0</htmlformentryVersion>
+		<htmlformentryVersion>3.3.1</htmlformentryVersion>
 		<htmlwidgetsVersion>1.7.2</htmlwidgetsVersion>
 		<idgenVersion>4.4.0</idgenVersion>
 		<metadatadeployVersion>1.7</metadatadeployVersion>
@@ -75,7 +75,7 @@
 		<registrationcoreVersion>1.6</registrationcoreVersion>
 		<reportingRestVersion>1.6</reportingRestVersion>
 		<reportingVersion>0.10.4</reportingVersion>
-		<reportingCompatibilityVersion>1.5.10</reportingCompatibilityVersion>
+		<reportingCompatibilityVersion>1.5.11</reportingCompatibilityVersion>
 		<reportingUIVersion>1.2</reportingUIVersion>
 		<serializationxstreamVersion>0.2.12</serializationxstreamVersion>
 		<uicommonsVersion>2.1</uicommonsVersion>
